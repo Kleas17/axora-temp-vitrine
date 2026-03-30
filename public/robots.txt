@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Disallow admin/private areas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://axora.fr/sitemap.xml
+
+# Crawl-delay for well-behaved bots
+Crawl-delay: 1
