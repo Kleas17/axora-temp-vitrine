@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 async function verifyHcaptcha(token: string): Promise<boolean> {
   const res = await fetch('https://api.hcaptcha.com/siteverify', {
     method: 'POST',
@@ -34,6 +32,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Validation captcha échouée' }, { status: 400 })
     }
 
+    const resend = new Resend(process.env.RESEND_API_KEY)
     const { error } = await resend.emails.send({
       from: 'no-reply@axora-studio.fr',
       to: 'contact@axora-studio.fr',
