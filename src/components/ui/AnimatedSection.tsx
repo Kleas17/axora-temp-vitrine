@@ -1,7 +1,26 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { ReactNode } from 'react'
+import { useEffect, useRef, ReactNode } from 'react'
+
+// Singleton — one observer for all animated sections instead of one per instance
+let sharedObserver: IntersectionObserver | null = null
+
+function getObserver(): IntersectionObserver {
+  if (!sharedObserver) {
+    sharedObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('anim-visible')
+            sharedObserver!.unobserve(entry.target)
+          }
+        })
+      },
+      { rootMargin: '-50px' }
+    )
+  }
+  return sharedObserver
+}
 
 interface AnimatedSectionProps {
   children: ReactNode
@@ -11,29 +30,6 @@ interface AnimatedSectionProps {
   direction?: 'up' | 'down' | 'left' | 'right' | 'none'
 }
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.1,
-    },
-  },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94],
-    },
-  },
-}
-
 export function AnimatedSection({
   children,
   className,
@@ -41,51 +37,39 @@ export function AnimatedSection({
   stagger = false,
   direction = 'up',
 }: AnimatedSectionProps) {
-  const getInitial = () => {
-    switch (direction) {
-      case 'up': return { opacity: 0, y: 30 }
-      case 'down': return { opacity: 0, y: -30 }
-      case 'left': return { opacity: 0, x: 30 }
-      case 'right': return { opacity: 0, x: -30 }
-      case 'none': return { opacity: 0 }
-    }
-  }
+  const ref = useRef<HTMLDivElement>(null)
 
-  const getAnimate = () => {
-    return { opacity: 1, y: 0, x: 0 }
-  }
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const obs = getObserver()
+    obs.observe(el)
+    return () => obs.unobserve(el)
+  }, [])
+
+  const style = delay ? ({ '--anim-delay': `${delay}s` } as React.CSSProperties) : undefined
 
   if (stagger) {
     return (
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: '-50px' }}
-        variants={containerVariants}
-        className={className}
-      >
+      <div ref={ref} className={`anim-stagger${className ? ` ${className}` : ''}`} style={style}>
         {children}
-      </motion.div>
+      </div>
     )
   }
 
   return (
-    <motion.div
-      initial={getInitial()}
-      whileInView={getAnimate()}
-      viewport={{ once: true, margin: '-50px' }}
-      transition={{
-        duration: 0.6,
-        delay,
-        ease: [0.25, 0.46, 0.45, 0.94],
-      }}
-      className={className}
+    <div
+      ref={ref}
+      className={`anim-init anim-${direction}${className ? ` ${className}` : ''}`}
+      style={style}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
 
+// Kept for backwards compatibility with inner pages — server section components
+// should apply anim-item class directly to avoid extra DOM nodes
 export function AnimatedItem({
   children,
   className,
@@ -93,11 +77,7 @@ export function AnimatedItem({
   children: ReactNode
   className?: string
 }) {
-  return (
-    <motion.div variants={itemVariants} className={className}>
-      {children}
-    </motion.div>
-  )
+  return <div className={`anim-item${className ? ` ${className}` : ''}`}>{children}</div>
 }
 
 export default AnimatedSection

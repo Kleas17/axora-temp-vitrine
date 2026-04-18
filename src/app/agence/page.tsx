@@ -8,80 +8,115 @@ import Link from 'next/link'
 const values = [
   {
     icon: Heart,
-    title: 'Passion du craft',
-    description: 'Nous mettons un point d\'honneur à livrer des produits dont nous sommes fiers. Chaque ligne de code, chaque pixel est pensé pour l\'excellence.',
+    title: "Exigence d'exécution",
+    description:
+      "Chaque détail compte. Nous cherchons un rendu propre, lisible et durable plutôt qu'un site vite fait ou surchargé.",
     color: 'from-pink-500 to-rose-600',
   },
   {
     icon: Target,
-    title: 'Orientés résultats',
-    description: 'La beauté c\'est bien, les conversions c\'est mieux. Nous mesurons le succès de nos projets à l\'impact réel sur votre business.',
+    title: 'Orientation business',
+    description:
+      "Un projet digital utile doit clarifier l'offre, faciliter l'action et soutenir un objectif concret : prise de contact, vente, recrutement ou structuration interne.",
     color: 'from-blue-500 to-indigo-600',
   },
   {
     icon: Users,
-    title: 'Partenariat client',
-    description: 'Vous n\'êtes pas un numéro. Nous construisons des relations durables basées sur la confiance, la transparence et les résultats partagés.',
+    title: 'Relation directe',
+    description:
+      "Vous échangez avec des interlocuteurs impliqués dans le cadrage et la production. Moins d'intermédiaires, plus de clarté.",
     color: 'from-violet-500 to-purple-600',
   },
   {
     icon: Lightbulb,
-    title: 'Innovation continue',
-    description: 'Le web évolue vite. Nous nous formons en permanence aux dernières technologies pour vous apporter les solutions les plus performantes du marché.',
+    title: 'Choix pertinents',
+    description:
+      "Nous évitons les effets de mode et retenons des solutions adaptées à votre contexte, à votre niveau de maturité et à vos contraintes.",
     color: 'from-amber-500 to-orange-600',
   },
 ]
 
-const techStack = [
-  { name: 'Next.js', category: 'Frontend' },
-  { name: 'React', category: 'Frontend' },
-  { name: 'TypeScript', category: 'Language' },
-  { name: 'Tailwind CSS', category: 'Styling' },
-  { name: 'Framer Motion', category: 'Animation' },
-  { name: 'Node.js', category: 'Backend' },
-  { name: 'Prisma', category: 'ORM' },
-  { name: 'PostgreSQL', category: 'Database' },
-  { name: 'Redis', category: 'Cache' },
-  { name: 'Stripe', category: 'Paiements' },
-  { name: 'Vercel', category: 'Déploiement' },
-  { name: 'AWS', category: 'Cloud' },
-  { name: 'Docker', category: 'DevOps' },
-  { name: 'GitHub Actions', category: 'CI/CD' },
-  { name: 'Figma', category: 'Design' },
+const workingPrinciples = [
+  { name: 'Clarté', category: 'Message et structure' },
+  { name: 'Sur-mesure', category: 'Selon vos objectifs' },
+  { name: 'Fiabilité', category: 'Pour durer' },
+  { name: 'Visibilité', category: 'SEO et acquisition' },
+  { name: 'Performance', category: 'Pour vos visiteurs' },
+  { name: 'Autonomie', category: 'Pour vos équipes' },
+  { name: 'Évolution', category: 'Pour la suite' },
+  { name: 'Simplicité', category: 'Pour exploiter le site' },
+  { name: 'Cadre', category: 'Pour avancer vite' },
+  { name: 'Suivi', category: 'Avant et après lancement' },
 ]
 
 const differentiators = [
   {
     icon: Shield,
-    title: 'Aucune sous-traitance',
-    description: 'Tous nos projets sont réalisés en interne par notre équipe senior. Nous ne déléguons jamais à des prestataires externes anonymes.',
+    title: 'Cadre clair',
+    description:
+      'Périmètre, priorités, étapes et livrables sont posés dès le départ pour éviter les projets flous et les arbitrages tardifs.',
   },
   {
     icon: TrendingUp,
-    title: 'Vision ROI',
-    description: 'Chaque décision de design ou de développement est prise en fonction de l\'impact business. Nous sommes obsédés par votre retour sur investissement.',
+    title: 'Vision utile',
+    description:
+      "Nous cherchons ce qui a vraiment un impact pour votre activité, pas ce qui alourdit le projet sans valeur concrète.",
   },
   {
     icon: Star,
-    title: 'Stack premium',
-    description: 'Nous utilisons uniquement des technologies éprouvées et maintenues activement. Pas de frameworks obscurs qui vous lieront les mains dans 2 ans.',
+    title: 'Base durable',
+    description:
+      "Le but n'est pas seulement de lancer vite, mais de poser une base propre, maintenable et capable d'évoluer.",
   },
   {
     icon: Award,
-    title: 'Livraison garantie',
-    description: 'Délais et budgets respectés ou nous offrons un mois de maintenance. Notre réputation repose sur nos engagements tenus.',
+    title: "Niveau d'exigence",
+    description:
+      "Nous privilégions une exécution nette, des détails soignés et une logique de qualité visible dans l'ensemble du parcours.",
   },
   {
     icon: Users,
-    title: 'Accompagnement long terme',
-    description: 'Notre relation ne s\'arrête pas au lancement. Nous sommes là pour vous accompagner dans votre croissance digitale sur le long terme.',
+    title: 'Accompagnement resserré',
+    description:
+      "Le pilotage reste direct et accessible. Vous savez où en est le projet, ce qui avance et ce qui doit être décidé.",
   },
+]
+
+const trustMarkers = [
+  {
+    title: 'Studio indépendant',
+    description:
+      "Un cadre plus direct, plus souple et plus impliqué qu'une structure lourde. Les décisions se prennent vite et les échanges restent lisibles.",
+  },
+  {
+    title: 'Accès direct',
+    description:
+      "Vous échangez avec les personnes qui cadrent et produisent. Cela évite les relais inutiles et les incompréhensions en cours de route.",
+  },
+  {
+    title: 'Ambition bien calibrée',
+    description:
+      "Nous cherchons le bon niveau d'ambition pour votre contexte : ni sous-dimensionné, ni artificiellement gonflé.",
+  },
+]
+
+const firstCallPoints = [
+  'Un retour honnête sur le besoin et le bon point de départ',
+  'Un avis clair sur le périmètre à traiter en premier',
+  'Une vision plus concrète du niveau de budget et de délai à prévoir',
+  'Une recommandation simple sur la suite : avancer, recadrer ou découper le projet',
+]
+
+const markers = [
+  { value: 'Clair', label: 'Positionnement', sub: 'Message et structure nets' },
+  { value: 'Direct', label: 'Échanges', sub: "Moins d'intermédiaires" },
+  { value: 'Sur-mesure', label: 'Production', sub: 'Pas de solution plaquée' },
+  { value: 'Durable', label: 'Approche', sub: 'Pensée pour évoluer' },
 ]
 
 export default function AgencePage() {
   return (
     <div className="min-h-screen">
-      {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 mesh-gradient pointer-events-none" />
         <div className="absolute inset-0 dot-grid opacity-20 pointer-events-none" />
@@ -94,49 +129,45 @@ export default function AgencePage() {
               transition={{ duration: 0.7 }}
             >
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-axora-accent/10 border border-axora-accent/20 text-axora-accent text-xs font-medium mb-6">
-                Notre histoire
+                Notre positionnement
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                L'agence derrière vos{' '}
-                <span className="gradient-text">succès digitaux</span>
+                Une agence web qui privilégie la <span className="gradient-text">clarté</span>, la
+                rigueur et l'exécution
               </h1>
               <p className="text-slate-400 text-lg leading-relaxed mb-8">
-                Axora est née d'une conviction simple : les PME et startups méritent des solutions digitales
-                de la même qualité que celles des grandes entreprises, sans les délais et tarifs astronomiques.
+                Axora Studio conçoit des sites web, des refontes et des logiciels métier avec une
+                approche simple : comprendre ce qui doit vraiment produire un résultat, puis
+                construire une solution lisible, solide et exploitable.
               </p>
               <p className="text-slate-400 text-base leading-relaxed mb-10">
-                Fondée en 2020, notre agence a accompagné plus de 30 entreprises dans leur transformation digitale.
-                Nous sommes fiers d'être partenaires de la croissance de nos clients, pas simples exécutants.
+                Nous réunissons cadrage, expérience utilisateur, structure de contenu et production
+                pour aider les entreprises à lancer un projet plus net, plus crédible et plus utile
+                pour leur activité.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white rounded-xl btn-gradient">
-                  Travailler avec nous <ArrowRight className="w-4 h-4" />
+                  Échanger sur votre besoin <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/realisations" className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white rounded-xl border border-[#1a1a2e] hover:border-axora-accent/40 transition-all">
-                  Voir nos réalisations
+                <Link href="/services" className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white rounded-xl border border-[#1a1a2e] hover:border-axora-accent/40 transition-all">
+                  Voir notre approche
                 </Link>
               </div>
             </motion.div>
 
-            {/* Stats */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
               className="grid grid-cols-2 gap-4"
             >
-              {[
-                { value: '2020', label: 'Fondée en', sub: 'Paris, France' },
-                { value: '50+', label: 'Projets livrés', sub: 'Sites, SaaS, Apps' },
-                { value: '30+', label: 'Clients actifs', sub: 'PME & Startups' },
-                { value: '98%', label: 'Satisfaction', sub: 'Basé sur nos avis' },
-              ].map((stat) => (
+              {markers.map((stat) => (
                 <motion.div
                   key={stat.label}
                   whileHover={{ y: -4, boxShadow: '0 0 30px rgba(99,102,241,0.15)' }}
                   className="bg-[#0f0f1a] border border-[#1a1a2e] rounded-2xl p-6"
                 >
-                  <div className="text-3xl font-black gradient-text mb-1">{stat.value}</div>
+                  <div className="text-2xl md:text-3xl font-black gradient-text mb-1">{stat.value}</div>
                   <div className="text-white font-semibold text-sm mb-0.5">{stat.label}</div>
                   <div className="text-slate-500 text-xs">{stat.sub}</div>
                 </motion.div>
@@ -146,7 +177,6 @@ export default function AgencePage() {
         </div>
       </section>
 
-      {/* Vision */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
@@ -158,13 +188,12 @@ export default function AgencePage() {
                   Notre <span className="gradient-text">vision</span>
                 </h2>
                 <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                  "Le web est le levier de croissance le plus puissant pour les entreprises modernes.
-                  Nous croyons que chaque PME mérite un site web qui travaille autant qu'elle —
-                  24h/24, 7j/7, visible sur Google, rapide comme l'éclair et conçu pour convertir."
+                  Un bon projet digital ne doit pas seulement être beau. Il doit rendre l'offre plus
+                  lisible, inspirer confiance, faciliter l'action et rester simple à faire évoluer.
                 </p>
                 <p className="text-slate-400 text-base leading-relaxed">
-                  Notre mission : démocratiser l'accès à des solutions digitales premium,
-                  en alliant excellence technique, design de qualité et stratégie business rigoureuse.
+                  C'est cette logique qui guide notre travail : moins d'effet, plus de clarté, de
+                  structure et de décisions utiles pour votre activité.
                 </p>
               </div>
             </div>
@@ -172,7 +201,31 @@ export default function AgencePage() {
         </div>
       </section>
 
-      {/* Values */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Une structure <span className="gradient-text">simple à comprendre</span>
+            </h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              Pas de discours d'agence surjoué. Nous préférons un cadre direct, des décisions
+              lisibles et une implication forte sur le projet.
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection stagger className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {trustMarkers.map((item) => (
+              <AnimatedItem key={item.title}>
+                <div className="bg-[#0f0f1a] border border-[#1a1a2e] rounded-2xl p-6 h-full">
+                  <h3 className="text-white font-semibold mb-3">{item.title}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">{item.description}</p>
+                </div>
+              </AnimatedItem>
+            ))}
+          </AnimatedSection>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="text-center mb-14">
@@ -180,7 +233,7 @@ export default function AgencePage() {
               Nos <span className="gradient-text">valeurs</span>
             </h2>
             <p className="text-slate-400 max-w-xl mx-auto">
-              Ces principes guident chacune de nos décisions, du recrutement à la livraison.
+              Une ligne simple : faire peu de promesses, mais construire une base propre et utile.
             </p>
           </AnimatedSection>
           <AnimatedSection stagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -202,23 +255,21 @@ export default function AgencePage() {
         </div>
       </section>
 
-      {/* Tech Stack */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Notre <span className="gradient-text">stack technologique</span>
+              Notre manière de <span className="gradient-text">concevoir les projets</span>
             </h2>
             <p className="text-slate-400 max-w-xl mx-auto">
-              Nous utilisons les meilleures technologies du marché, choisies pour leur performance,
-              leur écosystème et leur pérennité.
+              Nous adaptons les solutions au contexte réel du projet, pas l'inverse.
             </p>
           </AnimatedSection>
           <AnimatedSection>
             <div className="flex flex-wrap gap-3 justify-center">
-              {techStack.map((tech, index) => (
+              {workingPrinciples.map((item, index) => (
                 <motion.div
-                  key={tech.name}
+                  key={item.name}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -226,8 +277,8 @@ export default function AgencePage() {
                   whileHover={{ scale: 1.05, borderColor: 'rgba(99,102,241,0.5)' }}
                   className="flex flex-col items-center px-5 py-3 bg-[#0f0f1a] border border-[#1a1a2e] rounded-xl cursor-default"
                 >
-                  <span className="text-white font-semibold text-sm">{tech.name}</span>
-                  <span className="text-slate-500 text-xs mt-0.5">{tech.category}</span>
+                  <span className="text-white font-semibold text-sm">{item.name}</span>
+                  <span className="text-slate-500 text-xs mt-0.5">{item.category}</span>
                 </motion.div>
               ))}
             </div>
@@ -235,13 +286,11 @@ export default function AgencePage() {
         </div>
       </section>
 
-      {/* Why choose us */}
       <section className="py-20 pb-24">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Pourquoi choisir{' '}
-              <span className="gradient-text">Axora</span> ?
+              Pourquoi choisir <span className="gradient-text">Axora</span> ?
             </h2>
           </AnimatedSection>
           <AnimatedSection stagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -256,6 +305,42 @@ export default function AgencePage() {
                 </div>
               </AnimatedItem>
             ))}
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <section className="pb-24">
+        <div className="max-w-5xl mx-auto px-6">
+          <AnimatedSection>
+            <div className="bg-[#0f0f1a] border border-[#1a1a2e] rounded-3xl p-8 md:p-10">
+              <div className="max-w-2xl mb-8">
+                <h2 className="text-3xl font-bold text-white mb-4">
+                  Ce que vous pouvez attendre du <span className="gradient-text">premier échange</span>
+                </h2>
+                <p className="text-slate-400 leading-relaxed">
+                  Le but n'est pas de vous vendre quelque chose à tout prix. Le premier échange sert
+                  surtout à clarifier si le besoin est mature, quel périmètre traiter en premier et
+                  quelle direction serait la plus pertinente.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                {firstCallPoints.map((point) => (
+                  <div key={point} className="rounded-2xl border border-[#1a1a2e] bg-[#080810] p-4 text-sm text-slate-300">
+                    {point}
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white rounded-xl btn-gradient">
+                  Parler de votre besoin <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/services" className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white rounded-xl border border-[#1a1a2e] hover:border-axora-accent/40 transition-all">
+                  Explorer les services
+                </Link>
+              </div>
+            </div>
           </AnimatedSection>
         </div>
       </section>

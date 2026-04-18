@@ -1,6 +1,3 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import clsx from 'clsx'
 
 interface CardProps {
@@ -33,18 +30,9 @@ export default function Card({
 
   if (variant === 'hover-glow') {
     return (
-      <motion.div
-        whileHover={{
-          borderColor: 'rgba(99, 102, 241, 0.4)',
-          boxShadow: '0 0 30px rgba(99, 102, 241, 0.15), 0 20px 60px rgba(0, 0, 0, 0.4)',
-          y: -4,
-        }}
-        transition={{ duration: 0.2 }}
-        onClick={onClick}
-        className={baseClasses}
-      >
+      <div onClick={onClick} className={clsx(baseClasses, 'card-hover-glow')}>
         {children}
-      </motion.div>
+      </div>
     )
   }
 

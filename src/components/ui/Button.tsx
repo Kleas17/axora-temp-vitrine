@@ -1,6 +1,3 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { LucideIcon } from 'lucide-react'
 import clsx from 'clsx'
@@ -62,11 +59,7 @@ export default function Button({
 
   if (href) {
     return (
-      <motion.div
-        whileHover={{ scale: disabled ? 1 : 1.02 }}
-        whileTap={{ scale: disabled ? 1 : 0.98 }}
-        className="inline-block"
-      >
+      <div className={clsx('btn-interactive', disabled && 'pointer-events-none')}>
         {external ? (
           <a href={href} target="_blank" rel="noopener noreferrer" className={baseClasses}>
             {content}
@@ -76,20 +69,18 @@ export default function Button({
             {content}
           </Link>
         )}
-      </motion.div>
+      </div>
     )
   }
 
   return (
-    <motion.button
-      whileHover={{ scale: disabled ? 1 : 1.02 }}
-      whileTap={{ scale: disabled ? 1 : 0.98 }}
+    <button
       onClick={onClick}
       disabled={disabled}
       type={type}
-      className={baseClasses}
+      className={clsx(baseClasses, 'btn-interactive')}
     >
       {content}
-    </motion.button>
+    </button>
   )
 }
