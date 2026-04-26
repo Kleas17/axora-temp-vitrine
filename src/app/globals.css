@@ -69,7 +69,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   display: inline-block;
-  font-size: 1.1em;
+  font-size: 1.2em;
   animation: text-breathe 5s ease-in-out infinite;
 }
 
