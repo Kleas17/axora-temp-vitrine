@@ -89,7 +89,11 @@ export default function ContactPage() {
   useEffect(() => {
     if (isSubmitted) {
       setTimeout(() => {
-        formContainerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        if (window.innerWidth >= 1024) {
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        } else {
+          formContainerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        }
       }, 600)
     }
   }, [isSubmitted])
