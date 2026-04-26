@@ -117,10 +117,7 @@ body {
   animation: hero-rise 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation-delay: var(--delay, 0ms);
 }
-/* No entrance animation on mobile — LCP fires immediately, no transform delay */
-@media (max-width: 767px) {
-  .hero-item { animation: none; }
-}
+
 
 /* Animated Background Blobs */
 @keyframes blob-float {

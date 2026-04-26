@@ -67,11 +67,12 @@ export default function HeroSection() {
           </div>
 
           <h1
-            className="hero-item text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-6"
+            className="hero-item text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6"
             style={{ '--delay': '80ms' } as React.CSSProperties}
           >
-            Des projets digitaux sur-mesure pour{' '}
-            <span className="gradient-text">clarifier</span> votre offre
+            Des projets digitaux sur-mesure
+            <br className="hidden lg:block" />
+            {' '}pour <span className="gradient-text">clarifier</span> votre offre
             <br />
             et soutenir votre <span className="gradient-text">croissance</span>
           </h1>
@@ -126,7 +127,7 @@ export default function HeroSection() {
           >
             {[
               { value: '< 24h', label: 'Premier retour', icon: Zap },
-              { value: 'Poitiers', label: 'Base studio', icon: Users },
+              { value: 'France entière', label: 'Studio à Poitiers', icon: Users },
               { value: 'Sur-mesure', label: 'Zéro template', icon: Star },
               { value: 'Durable', label: 'Base saine', icon: Calendar },
             ].map((item) => (
