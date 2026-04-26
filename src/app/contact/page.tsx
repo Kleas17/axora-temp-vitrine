@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Mail, Clock, Send, Check, Calendar, MessageSquare, ChevronDown, Phone, Building2 } from 'lucide-react'
 import HCaptcha from '@hcaptcha/react-hcaptcha'
@@ -84,7 +84,15 @@ export default function ContactPage() {
   const [submitError, setSubmitError] = useState('')
   const [hcaptchaToken, setHcaptchaToken] = useState<string | null>(null)
   const captchaRef = useRef<HCaptcha>(null)
-  const successRef = useRef<HTMLDivElement>(null)
+  const formContainerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (isSubmitted) {
+      setTimeout(() => {
+        formContainerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }, 600)
+    }
+  }, [isSubmitted])
 
   const validate = () => {
     const newErrors: Record<string, string> = {}
@@ -117,7 +125,6 @@ export default function ContactPage() {
       if (!res.ok) throw new Error('Erreur serveur')
 
       setIsSubmitted(true)
-      setTimeout(() => successRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100)
       trackEvent('contact_form_submit', {
         project_type: formData.typeProjet,
         budget: formData.budget || 'non_renseigne',
@@ -189,7 +196,7 @@ export default function ContactPage() {
       <section className="py-12 pb-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3" ref={formContainerRef}>
               <AnimatePresence mode="wait">
                 {!isSubmitted ? (
                   <motion.div
@@ -394,7 +401,6 @@ export default function ContactPage() {
                 ) : (
                   <motion.div
                     key="success"
-                    ref={successRef}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ type: 'spring', damping: 20, stiffness: 200 }}
