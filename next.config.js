@@ -11,22 +11,6 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
 
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.axora-studio.fr',
-          },
-        ],
-        destination: 'https://axora-studio.fr/:path*',
-        permanent: true,
-      },
-    ]
-  },
-
   async headers() {
     return [
       {
