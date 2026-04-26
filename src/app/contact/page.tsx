@@ -84,6 +84,7 @@ export default function ContactPage() {
   const [submitError, setSubmitError] = useState('')
   const [hcaptchaToken, setHcaptchaToken] = useState<string | null>(null)
   const captchaRef = useRef<HCaptcha>(null)
+  const successRef = useRef<HTMLDivElement>(null)
 
   const validate = () => {
     const newErrors: Record<string, string> = {}
@@ -116,6 +117,7 @@ export default function ContactPage() {
       if (!res.ok) throw new Error('Erreur serveur')
 
       setIsSubmitted(true)
+      setTimeout(() => successRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100)
       trackEvent('contact_form_submit', {
         project_type: formData.typeProjet,
         budget: formData.budget || 'non_renseigne',
@@ -392,6 +394,7 @@ export default function ContactPage() {
                 ) : (
                   <motion.div
                     key="success"
+                    ref={successRef}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ type: 'spring', damping: 20, stiffness: 200 }}
