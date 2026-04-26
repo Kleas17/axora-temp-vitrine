@@ -54,9 +54,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-axora-blue to-axora-purple flex items-center justify-center shadow-glow-blue group-hover:shadow-glow-purple transition-all duration-300">
-                <img src="/axoralogo/axoralogopng.png" alt="Axora Studio" className="w-5 h-5 object-contain" />
-              </div>
+              <img src="/axoralogo/axoralogopng.png" alt="Axora Studio" className="w-9 h-9 object-contain" />
               <span className="text-xl font-bold gradient-text tracking-tight">AXORA</span>
             </Link>
 
@@ -108,9 +106,7 @@ export default function Header() {
       >
         <div className="flex items-center justify-between p-6 border-b border-[#1a1a2e]">
           <Link href="/" className="flex items-center gap-2" onClick={closeMenu}>
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-axora-blue to-axora-purple flex items-center justify-center">
-              <img src="/axoralogo/axoralogopng.png" alt="Axora Studio" className="w-5 h-5 object-contain" />
-            </div>
+            <img src="/axoralogo/axoralogopng.png" alt="Axora Studio" className="w-9 h-9 object-contain" />
             <span className="text-xl font-bold gradient-text">AXORA</span>
           </Link>
           <button

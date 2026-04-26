@@ -46,9 +46,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-7 gap-10 mb-12">
           <div className="md:col-span-2 xl:col-span-2">
             <Link href="/" className="flex items-center gap-2 group mb-4">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-axora-blue to-axora-purple flex items-center justify-center shadow-glow-blue">
-                <img src="/axoralogo/axoralogopng.png" alt="Axora Studio" className="w-6 h-6 object-contain" />
-              </div>
+              <img src="/axoralogo/axoralogopng.png" alt="Axora Studio" className="w-10 h-10 object-contain" />
               <span className="text-2xl font-bold gradient-text">AXORA</span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
