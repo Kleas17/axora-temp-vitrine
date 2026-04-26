@@ -15,7 +15,8 @@ export default function PolitiqueConfidentialitePage() {
               </h2>
               <div className="space-y-1.5">
                 <p><span className="text-slate-400">Raison sociale :</span> Axora Studio</p>
-                <p><span className="text-slate-400">Adresse :</span> <span className="text-amber-400 font-medium">À SAISIR</span> — Poitiers, 86000, France</p>
+                <p><span className="text-slate-400">Adresse :</span> <span className="text-amber-400 font-medium">4 ALL DE LA CHENEVIERE
+86000 POITIERS</span> — Poitiers, 86000, France</p>
                 <p><span className="text-slate-400">Email :</span> marcantoine.damota@axora-studio.fr</p>
               </div>
               <p className="mt-3">

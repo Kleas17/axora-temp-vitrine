@@ -504,32 +504,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div id="calendly" className="bg-[#0f0f1a] border border-[#1a1a2e] rounded-2xl p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Calendar className="w-5 h-5 text-axora-accent" />
-                    <h3 className="text-white font-semibold">Prendre rendez-vous directement</h3>
-                  </div>
-                  <p className="text-slate-400 text-sm mb-5">
-                    Préférez un appel vidéo de 30 minutes ? Réservez directement un créneau dans notre agenda.
-                  </p>
-                  <div className="bg-[#080810] border border-[#1a1a2e] rounded-xl p-8 text-center">
-                    <Calendar className="w-12 h-12 text-axora-accent/30 mx-auto mb-3" />
-                    <p className="text-slate-500 text-sm mb-4">Calendrier de réservation</p>
-                    <motion.a
-                      href="https://calendly.com/axora"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => trackEvent('calendly_click')}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white rounded-xl btn-gradient"
-                    >
-                      <MessageSquare className="w-4 h-4" />
-                      Réserver un appel
-                    </motion.a>
-                  </div>
-                </div>
-
                 <div className="bg-[#0f0f1a] border border-[#1a1a2e] rounded-2xl p-6 mt-6">
                   <h3 className="text-white font-semibold mb-4">Besoin d'un point de départ ?</h3>
                   <div className="space-y-3">

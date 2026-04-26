@@ -142,12 +142,6 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="hero-item flex flex-col items-center mt-20" style={{ '--delay': '480ms' } as React.CSSProperties}>
-          <span className="text-slate-500 text-xs mb-3 tracking-widest uppercase">Découvrir</span>
-          <div className="w-6 h-10 border-2 border-axora-accent/30 rounded-full flex justify-center pt-2">
-            <div className="scroll-dot w-1 h-2 bg-axora-accent rounded-full" />
-          </div>
-        </div>
       </div>
     </section>
   )

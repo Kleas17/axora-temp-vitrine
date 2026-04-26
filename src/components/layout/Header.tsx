@@ -10,7 +10,7 @@ const navLinks = [
   { href: '/agence', label: 'Agence' },
   { href: '/services', label: 'Services' },
   { href: '/saas', label: 'SaaS' },
-  { href: '/realisations', label: 'Exemples' },
+  { href: '/realisations', label: 'Produits' },
   { href: '/tarifs', label: 'Tarifs' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },

@@ -15,13 +15,12 @@ export default function MentionsLegalesPage() {
               </h2>
               <div className="space-y-1.5">
                 <p><span className="text-slate-400">Dénomination sociale :</span> Axora Studio</p>
-                <p><span className="text-slate-400">Forme juridique :</span> <span className="text-amber-400 font-medium">À SAISIR</span> (ex. : Auto-entrepreneur / SASU / SAS...)</p>
-                <p><span className="text-slate-400">Siège social :</span> <span className="text-amber-400 font-medium">À SAISIR</span> — Poitiers, 86000, France</p>
-                <p><span className="text-slate-400">SIRET :</span> <span className="text-amber-400 font-medium">À SAISIR</span></p>
-                <p><span className="text-slate-400">N° TVA intracommunautaire :</span> <span className="text-amber-400 font-medium">À SAISIR</span> (si applicable)</p>
-                <p><span className="text-slate-400">Directeur de la publication :</span> <span className="text-amber-400 font-medium">À SAISIR</span> (Prénom Nom)</p>
+                <p><span className="text-slate-400">Forme juridique :</span> <span className="text-amber-400 font-medium">Auto-entrepreneur</span></p>
+                <p><span className="text-slate-400">Siège social :</span> <span className="text-amber-400 font-medium">4 ALL DE LA CHENEVIERE
+86000 POITIERS</span> — Poitiers, 86000, France</p>
+                <p><span className="text-slate-400">SIRET :</span> <span className="text-amber-400 font-medium">94879325200024</span></p>
+                <p><span className="text-slate-400">Directeur de la publication :</span> <span className="text-amber-400 font-medium">DA MOTA Marc-Antoine</span> (Prénom Nom)</p>
                 <p><span className="text-slate-400">Email :</span> marcantoine.damota@axora-studio.fr</p>
-                <p><span className="text-slate-400">Téléphone :</span> <span className="text-amber-400 font-medium">À SAISIR</span></p>
                 <p><span className="text-slate-400">Site web :</span> https://axora-studio.fr</p>
               </div>
             </section>

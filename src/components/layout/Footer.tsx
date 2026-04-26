@@ -24,15 +24,6 @@ const footerLinks = {
     { label: 'Tarifs', href: '/tarifs' },
     { label: 'FAQ', href: '/tarifs#faq' },
   ],
-  Secteurs: [
-    { label: "Cabinet d'avocat", href: '/site-web-cabinet-avocat' },
-    { label: 'Cabinet comptable', href: '/site-web-cabinet-comptable' },
-    { label: 'Organisme de formation', href: '/site-web-organisme-formation' },
-    { label: 'Consultant indépendant', href: '/site-web-consultant-independant' },
-    { label: 'MVP SaaS B2B', href: '/mvp-saas-b2b' },
-    { label: 'Logiciel métier PME', href: '/logiciel-metier-pme' },
-    { label: 'Gestion organisme de formation', href: '/logiciel-gestion-organisme-formation' },
-  ],
 }
 
 export default function Footer() {
