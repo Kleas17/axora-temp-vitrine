@@ -1,9 +1,6 @@
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-export const dynamic = 'force-dynamic'
-
-const resend = new Resend(process.env.RESEND_API_KEY)
 
 // Simple in-memory rate limiter — 3 requests per IP per minute
 const rateLimit = new Map<string, { count: number; resetAt: number }>()
@@ -36,6 +33,7 @@ async function verifyHcaptcha(token: string): Promise<boolean> {
 }
 
 export async function POST(request: Request) {
+  const resend = new Resend(process.env.RESEND_API_KEY)
   try {
     // Rate limiting by IP
     const ip =
