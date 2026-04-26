@@ -76,7 +76,7 @@ export async function POST(request: Request) {
 
     const { error } = await resend.emails.send({
       from: 'no-reply@axora-studio.fr',
-      to: 'contact@axora-studio.fr',
+      to: 'marcantoine.damota@axora-studio.fr',
       replyTo: email,
       subject: `Nouvelle demande — ${typeProjet} (${nom})`,
       html: `

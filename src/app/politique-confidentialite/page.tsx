@@ -16,7 +16,7 @@ export default function PolitiqueConfidentialitePage() {
               <div className="space-y-1.5">
                 <p><span className="text-slate-400">Raison sociale :</span> Axora Studio</p>
                 <p><span className="text-slate-400">Adresse :</span> <span className="text-amber-400 font-medium">À SAISIR</span> — Poitiers, 86000, France</p>
-                <p><span className="text-slate-400">Email :</span> contact@axora-studio.fr</p>
+                <p><span className="text-slate-400">Email :</span> marcantoine.damota@axora-studio.fr</p>
               </div>
               <p className="mt-3">
                 Axora Studio (ci-après « nous ») attache une grande importance à la protection de vos données personnelles et au respect de votre vie privée, conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679) et à la loi Informatique et Libertés.
@@ -204,8 +204,8 @@ export default function PolitiqueConfidentialitePage() {
               </ul>
               <p className="mt-4">
                 Pour exercer ces droits, écrivez-nous à :{' '}
-                <a href="mailto:contact@axora-studio.fr" className="text-axora-accent hover:text-white transition-colors">
-                  contact@axora-studio.fr
+                <a href="mailto:marcantoine.damota@axora-studio.fr" className="text-axora-accent hover:text-white transition-colors">
+                  marcantoine.damota@axora-studio.fr
                 </a>
               </p>
               <p className="mt-2">

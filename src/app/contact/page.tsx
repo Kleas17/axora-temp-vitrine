@@ -429,8 +429,8 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <div className="text-slate-500 text-xs mb-0.5">Email</div>
-                        <a href="mailto:contact@axora-studio.fr" className="text-white text-sm hover:text-axora-accent transition-colors">
-                          contact@axora-studio.fr
+                        <a href="mailto:marcantoine.damota@axora-studio.fr" className="text-white text-sm hover:text-axora-accent transition-colors">
+                          marcantoine.damota@axora-studio.fr
                         </a>
                       </div>
                     </div>

@@ -20,7 +20,7 @@ export default function MentionsLegalesPage() {
                 <p><span className="text-slate-400">SIRET :</span> <span className="text-amber-400 font-medium">À SAISIR</span></p>
                 <p><span className="text-slate-400">N° TVA intracommunautaire :</span> <span className="text-amber-400 font-medium">À SAISIR</span> (si applicable)</p>
                 <p><span className="text-slate-400">Directeur de la publication :</span> <span className="text-amber-400 font-medium">À SAISIR</span> (Prénom Nom)</p>
-                <p><span className="text-slate-400">Email :</span> contact@axora-studio.fr</p>
+                <p><span className="text-slate-400">Email :</span> marcantoine.damota@axora-studio.fr</p>
                 <p><span className="text-slate-400">Téléphone :</span> <span className="text-amber-400 font-medium">À SAISIR</span></p>
                 <p><span className="text-slate-400">Site web :</span> https://axora-studio.fr</p>
               </div>

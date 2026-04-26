@@ -6,7 +6,7 @@ export const siteConfig = {
   locale: 'fr_FR',
   description:
     'Axora Studio conçoit des sites web sur-mesure, des plateformes métier et des solutions SaaS pensées pour la performance, la conversion et la croissance.',
-  contactEmail: 'contact@axora-studio.fr',
+  contactEmail: 'marcantoine.damota@axora-studio.fr',
   contactPhone: '',
   contactPhoneDisplay: '',
   linkedinUrl: '',

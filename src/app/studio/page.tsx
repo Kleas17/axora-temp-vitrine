@@ -15,7 +15,7 @@ export default function StudioPage() {
       name: studioProfile.name,
       url: absoluteUrl('/'),
       description: studioProfile.description,
-      email: 'contact@axora-studio.fr',
+      email: 'marcantoine.damota@axora-studio.fr',
       logo: absoluteUrl('/icon.svg'),
     },
   }

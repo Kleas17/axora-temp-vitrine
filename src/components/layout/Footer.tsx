@@ -59,11 +59,11 @@ export default function Footer() {
 
             <div className="space-y-3">
               <a
-                href="mailto:contact@axora-studio.fr"
+                href="mailto:marcantoine.damota@axora-studio.fr"
                 className="flex items-center gap-3 text-sm text-slate-400 hover:text-white transition-colors group"
               >
                 <Mail className="w-4 h-4 text-axora-accent group-hover:text-axora-blue transition-colors flex-shrink-0" />
-                contact@axora-studio.fr
+                marcantoine.damota@axora-studio.fr
               </a>
               {siteConfig.contactPhone ? (
                 <a
