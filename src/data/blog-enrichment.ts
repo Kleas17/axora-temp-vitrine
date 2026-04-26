@@ -354,7 +354,7 @@ export const blogEnrichment: Record<string, BlogEnrichment> = {
   'site-vitrine-ou-ecommerce': {
     imageAlt: "Illustration comparant site vitrine et boutique e-commerce",
     keyTakeaways: [
-      'Le site vitrine convainc, le e-commerce vend directement — ce ne sont pas les mêmes objectifs.',
+      'Le site vitrine convainc, le e-commerce vend directement : ce ne sont pas les mêmes objectifs.',
       "Le choix dépend de votre processus de vente, pas du type de produit.",
       'Les formules hybrides permettent de tester la vente en ligne sans tout investir.',
     ],

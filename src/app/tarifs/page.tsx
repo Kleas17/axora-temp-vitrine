@@ -64,7 +64,6 @@ export default function TarifsPage() {
                 key={principle.title}
                 className="bg-[#0f0f1a] border border-[#1a1a2e] rounded-2xl p-8"
               >
-                <div className="text-3xl mb-4">{principle.icon}</div>
                 <h3 className="text-white font-semibold mb-3">{principle.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{principle.description}</p>
               </div>

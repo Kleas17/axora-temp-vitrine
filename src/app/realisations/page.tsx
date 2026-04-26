@@ -151,7 +151,7 @@ export default function RealisationsPage() {
               Des solutions prêtes à l'emploi, adaptées à votre activité
             </h2>
             <p className="text-slate-400 mt-2 max-w-2xl">
-              Développés et maintenus par Axora Studio — déployés en quelques jours avec une personnalisation à votre image.
+              Développés et maintenus par Axora Studio, déployés en quelques jours avec une personnalisation à votre image.
             </p>
           </AnimatedSection>
 
@@ -255,7 +255,7 @@ export default function RealisationsPage() {
               Des exemples de projets que nous pouvons concevoir
             </h2>
             <p className="text-slate-400 mt-2 max-w-2xl">
-              Sites vitrines, applications web, MVP SaaS, refontes — voici les typologies de besoins que nous traitons.
+              Sites vitrines, applications web, MVP SaaS, refontes : voici les typologies de besoins que nous traitons.
             </p>
           </AnimatedSection>
 

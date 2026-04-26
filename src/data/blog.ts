@@ -925,7 +925,7 @@ export const blogArticles: BlogArticle[] = [
         heading: 'Les redirections 301 : la règle non négociable',
         paragraphs: [
           "Si une URL change lors de la refonte, elle doit être redirigée en 301 vers sa nouvelle version. Sans cela, Google considère que la page a disparu et retire progressivement sa valeur.",
-          "Chaque redirection doit pointer vers la page la plus proche en contenu, pas vers la page d'accueil par défaut — ce réflexe courant est l'une des erreurs les plus coûteuses d'une migration.",
+          "Chaque redirection doit pointer vers la page la plus proche en contenu, pas vers la page d'accueil par défaut : ce réflexe courant est l'une des erreurs les plus coûteuses d'une migration.",
         ],
         bullets: [
           'Mapper chaque ancienne URL vers sa nouvelle équivalente',
@@ -988,7 +988,7 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: 'Fiches clients et historique : la mémoire du salon',
         paragraphs: [
-          "Connaître les habitudes de chaque client — prestation habituelle, coloration utilisée, fréquence de visite — permet de personnaliser l'accueil et de fidéliser plus efficacement.",
+          "Connaître les habitudes de chaque client (prestation habituelle, coloration utilisée, fréquence de visite) permet de personnaliser l'accueil et de fidéliser plus efficacement.",
           "Un bon logiciel centralise cet historique et le rend accessible en quelques secondes au moment de l'accueil, sans fouiller dans des carnets ou des tableurs.",
         ],
       },
@@ -1034,7 +1034,7 @@ export const blogArticles: BlogArticle[] = [
     seoDescription:
       "Les fonctionnalités indispensables d'un logiciel de gestion pour auto-école : dossiers élèves, planning moniteurs, suivi pédagogique et facturation.",
     introduction:
-      "La gestion d'une auto-école cumule des contraintes spécifiques : suivi réglementaire des formations, coordination entre moniteurs, gestion des contrats et des paiements. Un logiciel générique ne suffit pas — il faut un outil pensé pour ce métier.",
+      "La gestion d'une auto-école cumule des contraintes spécifiques : suivi réglementaire des formations, coordination entre moniteurs, gestion des contrats et des paiements. Un logiciel générique ne suffit pas : il faut un outil pensé pour ce métier.",
     sections: [
       {
         heading: 'La gestion des dossiers élèves : le cœur du logiciel',
@@ -1117,7 +1117,7 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: "Ce qu'il ne faut pas mettre dans un cahier des charges",
         paragraphs: [
-          "Lister des fonctionnalités sans expliquer pourquoi elles existent, copier-coller des sites de référence sans préciser ce qui vous plaît, ou imposer une solution technique avant d'avoir défini le besoin — ce sont les erreurs les plus fréquentes.",
+          "Lister des fonctionnalités sans expliquer pourquoi elles existent, copier-coller des sites de référence sans préciser ce qui vous plaît, ou imposer une solution technique avant d'avoir défini le besoin : ce sont les erreurs les plus fréquentes.",
           "Un bon cahier des charges explique le problème à résoudre, pas la solution à construire. Cette distinction change radicalement la qualité des propositions que vous recevrez.",
         ],
       },
@@ -1163,7 +1163,7 @@ export const blogArticles: BlogArticle[] = [
         heading: 'Erreur 1 et 2 : trop de fonctions et une cible trop floue',
         paragraphs: [
           "Le feature creep est l'erreur numéro un. Chaque fonctionnalité ajoutée avant validation rallonge le délai, augmente le budget et dilue la promesse centrale du produit. Un MVP doit prouver une chose, pas dix.",
-          "La deuxième erreur est d'avoir une cible trop large. \"Les TPE\" ou \"les RH\" ne sont pas des cibles — ce sont des catégories. Une cible utile, c'est un profil précis avec un problème récurrent et un budget identifié.",
+          "La deuxième erreur est d'avoir une cible trop large. \"Les TPE\" ou \"les RH\" ne sont pas des cibles, ce sont des catégories. Une cible utile, c'est un profil précis avec un problème récurrent et un budget identifié.",
         ],
         bullets: [
           'Définir une promesse en une seule phrase',
@@ -1182,7 +1182,7 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: 'Erreurs 4 et 5 : pas de boucle de feedback et développement en silo',
         paragraphs: [
-          "Un MVP sans utilisateurs réels qui testent et donnent des retours n'apprend rien. La boucle de feedback est la vraie valeur d'une première version — pas le produit lui-même.",
+          "Un MVP sans utilisateurs réels qui testent et donnent des retours n'apprend rien. La boucle de feedback est la vraie valeur d'une première version, pas le produit lui-même.",
           "Développer en silo pendant 6 mois avant toute confrontation au marché est la cinquième erreur classique. Le marché doit entrer dans le projet le plus tôt possible, même sous forme de démos ou de maquettes.",
         ],
       },
@@ -1246,7 +1246,7 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: 'Ce que le développement sur-mesure apporte réellement',
         paragraphs: [
-          "Un site développé sur-mesure — avec des frameworks modernes comme Next.js — offre des performances nativement supérieures, une sécurité maîtrisée et une structure évolutive sans dépendances à des plugins tiers.",
+          "Un site développé sur-mesure, avec des frameworks modernes comme Next.js, offre des performances nativement supérieures, une sécurité maîtrisée et une structure évolutive sans dépendances à des plugins tiers.",
           "Le coût initial est plus élevé, mais le coût total de possession sur 3 à 5 ans est souvent comparable ou inférieur à un site WordPress mal maintenu qui accumule des problèmes.",
         ],
       },
@@ -1260,7 +1260,7 @@ export const blogArticles: BlogArticle[] = [
       {
         question: 'WordPress est-il mauvais pour le SEO ?',
         answer:
-          "Non en soi, mais les problèmes de performance fréquents sur WordPress — scripts lourds, temps de réponse élevés — pénalisent le référencement si le site n'est pas correctement optimisé.",
+          "Non en soi, mais les problèmes de performance fréquents sur WordPress (scripts lourds, temps de réponse élevés) pénalisent le référencement si le site n'est pas correctement optimisé.",
       },
     ],
   },
@@ -1419,8 +1419,8 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: 'Les fourchettes réalistes selon le type de refonte',
         paragraphs: [
-          "Une refonte légère — modernisation visuelle, amélioration de la vitesse, quelques corrections de parcours — peut rester dans une fourchette contenue si le contenu est déjà bon et l'architecture solide.",
-          "Une refonte complète — nouveau positionnement, réécriture des contenus, nouvelle architecture, design sur-mesure et optimisation SEO — représente un investissement plus significatif, mais aussi un impact business plus fort.",
+          "Une refonte légère (modernisation visuelle, amélioration de la vitesse, quelques corrections de parcours) peut rester dans une fourchette contenue si le contenu est déjà bon et l'architecture solide.",
+          "Une refonte complète (nouveau positionnement, réécriture des contenus, nouvelle architecture, design sur-mesure et optimisation SEO) représente un investissement plus significatif, mais aussi un impact business plus fort.",
         ],
         bullets: [
           'Refonte légère : modernisation visuelle et corrections ciblées',
@@ -1446,7 +1446,7 @@ export const blogArticles: BlogArticle[] = [
       {
         question: 'Peut-on étaler le budget d\'une refonte sur plusieurs phases ?',
         answer:
-          "Oui. Une approche par phases — d'abord les corrections critiques, puis les améliorations structurelles — permet d'étaler l'investissement tout en avançant progressivement.",
+          "Oui. Une approche par phases (d'abord les corrections critiques, puis les améliorations structurelles) permet d'étaler l'investissement tout en avançant progressivement.",
       },
     ],
   },
@@ -1465,7 +1465,7 @@ export const blogArticles: BlogArticle[] = [
     seoDescription:
       "Comment optimiser votre fiche Google My Business pour améliorer votre référencement local, apparaître dans le Local Pack et générer plus de contacts depuis Google.",
     introduction:
-      "Le Local Pack — ces 3 résultats avec la carte qui apparaissent en haut de Google pour les recherches locales — est l'un des emplacements les plus visibles sur le moteur de recherche. Google My Business est la clé pour y accéder.",
+      "Le Local Pack (ces 3 résultats avec la carte qui apparaissent en haut de Google pour les recherches locales) est l'un des emplacements les plus visibles sur le moteur de recherche. Google My Business est la clé pour y accéder.",
     sections: [
       {
         heading: 'Les bases d\'une fiche Google My Business bien optimisée',

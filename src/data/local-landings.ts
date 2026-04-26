@@ -231,7 +231,7 @@ export const localLandings: LocalLanding[] = [
     context:
       "Être une agence basée à Poitiers, c'est avoir une vraie connaissance du tissu économique local : cabinets, artisans, commerces, organismes de formation, startups du numérique. Cette proximité permet des échanges plus fluides et une meilleure compréhension du contexte de chaque projet.",
     approach:
-      "Nous cadrons votre besoin, concevons les parcours et livrons un dispositif digital adapté à votre marché et vos objectifs — que le projet soit local, régional ou national.",
+      "Nous cadrons votre besoin, concevons les parcours et livrons un dispositif digital adapté à votre marché et vos objectifs, que le projet soit local, régional ou national.",
     benefits: [
       'Agence basée à Poitiers, disponible en présentiel',
       'Connaissance du tissu économique poitevin',

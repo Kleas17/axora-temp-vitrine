@@ -82,7 +82,7 @@ export default function TarifsCreationSiteWebPage() {
           <p className="text-slate-300 text-lg leading-relaxed max-w-3xl">
             Pas de grille tarifaire figée. Le coût d&apos;un site web sur mesure dépend de votre périmètre,
             de vos objectifs et de ce que vous pouvez investir. On part de votre enveloppe pour construire
-            une proposition cohérente — sans rogner sur ce qui compte vraiment.
+            une proposition cohérente, sans rogner sur ce qui compte vraiment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Link

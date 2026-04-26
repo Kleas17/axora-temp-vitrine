@@ -1,24 +1,20 @@
 export type BudgetPrinciple = {
-  icon: string
   title: string
   description: string
 }
 
 export const budgetPrinciples: BudgetPrinciple[] = [
   {
-    icon: '🎯',
     title: 'Cadrage précis avant tout',
     description:
       'On ne chiffre pas à l\'aveugle. Chaque devis part d\'un vrai échange sur votre besoin, votre contexte et vos priorités.',
   },
   {
-    icon: '💬',
     title: 'Votre budget, notre point de départ',
     description:
       'Dites-nous ce que vous pouvez investir. On construit une proposition adaptée à votre enveloppe, sans rogner sur la qualité de ce qui compte.',
   },
   {
-    icon: '📐',
     title: 'Périmètre ajusté, pas qualité dégradée',
     description:
       'Si le budget est serré, on priorise ce qui a le plus d\'impact plutôt que de tout faire à moitié. Mieux vaut moins mais bien fait.',
