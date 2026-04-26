@@ -60,7 +60,7 @@ body {
 
 @keyframes text-breathe {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.07); }
+  50% { transform: scale(1.03); }
 }
 
 .gradient-text-hero {
@@ -70,7 +70,7 @@ body {
   background-clip: text;
   display: inline-block;
   font-size: 1.1em;
-  animation: text-breathe 3s ease-in-out infinite;
+  animation: text-breathe 5s ease-in-out infinite;
 }
 
 .gradient-text-warm {

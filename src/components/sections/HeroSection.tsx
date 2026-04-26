@@ -80,7 +80,7 @@ export default function HeroSection() {
             className="hero-item text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed"
             style={{ '--delay': '160ms' } as React.CSSProperties}
           >
-            Axora Studio conçoit des sites web, des refontes et des logiciels métier avec une
+            On conçoit des sites web, des refontes et des logiciels métier avec une
             approche simple : rendre votre positionnement plus lisible, vos parcours plus clairs
             et votre base plus solide pour la suite.
           </p>

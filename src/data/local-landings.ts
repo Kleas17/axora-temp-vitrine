@@ -25,7 +25,7 @@ export const localLandings: LocalLanding[] = [
       "Axora Studio accompagne les entreprises avec des sites web sur-mesure, des refontes et des plateformes digitales pensées pour la croissance.",
     heroTitle: 'Une agence web pour des projets sur-mesure',
     intro:
-      "Axora Studio accompagne les entreprises qui veulent un site ou une plateforme capable de mieux présenter l'offre, mieux convertir et mieux soutenir la croissance.",
+      "On accompagne les entreprises qui veulent un site ou une plateforme capable de mieux présenter l'offre, mieux convertir et mieux soutenir la croissance.",
     audience:
       "Cette page s'adresse aux PME, startups, cabinets et structures de service qui ont besoin d'un partenaire digital fiable pour structurer ou relancer leur présence en ligne.",
     context:
@@ -225,7 +225,7 @@ export const localLandings: LocalLanding[] = [
       "Axora Studio est une agence web basée à Poitiers. Création de sites web sur-mesure, refontes, logiciels métier et SEO pour les entreprises de Poitiers et de la Vienne.",
     heroTitle: "Votre agence web à Poitiers pour des projets digitaux sur-mesure",
     intro:
-      "Axora Studio est basé à Poitiers. Nous accompagnons les entreprises de la Vienne et de Nouvelle-Aquitaine qui veulent un site web, une refonte ou un logiciel métier pensé pour produire un résultat concret.",
+      "On est basé à Poitiers. On accompagne les entreprises de la Vienne et de Nouvelle-Aquitaine qui veulent un site web, une refonte ou un logiciel métier pensé pour produire un résultat concret.",
     audience:
       "Cette page s'adresse aux TPE, PME, indépendants et structures de service basés à Poitiers, dans la Vienne ou en Nouvelle-Aquitaine qui cherchent un partenaire digital de proximité capable d'allier qualité d'exécution et accompagnement direct.",
     context:
@@ -265,7 +265,7 @@ export const localLandings: LocalLanding[] = [
       "Axora Studio crée des sites web sur-mesure à Poitiers et dans la Vienne. Sites vitrines, refonte, SEO local : des projets pensés pour convertir et durer.",
     heroTitle: "Création de site web à Poitiers : sur-mesure, performant et pensé pour convertir",
     intro:
-      "Vous cherchez une agence web à Poitiers pour créer ou refondre votre site ? Axora Studio conçoit des sites web sur-mesure pour les entreprises de la Vienne qui veulent une présence digitale sérieuse, rapide et bien référencée.",
+      "Vous cherchez une agence web à Poitiers pour créer ou refondre votre site ? On conçoit des sites web sur-mesure pour les entreprises de la Vienne qui veulent une présence digitale sérieuse, rapide et bien référencée.",
     audience:
       "Cette page s'adresse aux entrepreneurs, artisans, cabinets, commerçants et PME de Poitiers et de la Vienne qui veulent remplacer un site trop basique, lancer une nouvelle présence ou refondre un site qui ne convertit plus.",
     context:

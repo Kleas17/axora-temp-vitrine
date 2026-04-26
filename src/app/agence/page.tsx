@@ -136,7 +136,7 @@ export default function AgencePage() {
                 rigueur et l'exécution
               </h1>
               <p className="text-slate-400 text-lg leading-relaxed mb-8">
-                Axora Studio conçoit des sites web, des refontes et des logiciels métier avec une
+                On conçoit des sites web, des refontes et des logiciels métier avec une
                 approche simple : comprendre ce qui doit vraiment produire un résultat, puis
                 construire une solution lisible, solide et exploitable.
               </p>

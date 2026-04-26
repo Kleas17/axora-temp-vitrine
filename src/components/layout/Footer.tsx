@@ -52,7 +52,7 @@ export default function Footer() {
               <span className="text-2xl font-bold gradient-text">AXORA</span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
-              Axora Studio accompagne la création de sites web sur-mesure, les refontes, les
+              On accompagne la création de sites web sur-mesure, les refontes, les
               plateformes métier et les projets SaaS avec une approche orientée performance,
               clarté et croissance.
             </p>
