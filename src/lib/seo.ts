@@ -10,8 +10,8 @@ export const siteConfig = {
   contactPhone: '',
   contactPhoneDisplay: '',
   linkedinUrl: '',
+  // TODO: ajouter l'URL Google Business Profile une fois la fiche créée
   googleBusinessProfileUrl: '',
-  availabilityLabel: 'mai 2026',
   streetAddress: '',
 }
 

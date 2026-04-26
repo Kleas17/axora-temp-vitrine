@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Suspense } from 'react'
 import './globals.css'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import { ErrorBoundary } from '@/components/ui/ErrorBoundary'
 import { serviceDetails } from '@/data/services'
 import { absoluteUrl, siteConfig } from '@/lib/seo'
 
@@ -192,8 +194,19 @@ export default function RootLayout({
 
   return (
     <html lang="fr" className={inter.variable} suppressHydrationWarning>
-      <head />
+      <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://hcaptcha.com" />
+        <link rel="dns-prefetch" href="https://hcaptcha.com" />
+        <link rel="dns-prefetch" href="https://newassets.hcaptcha.com" />
+      </head>
       <body className={`${inter.className} antialiased`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-axora-accent focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold"
+        >
+          Aller au contenu principal
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -210,9 +223,15 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
-        {gaMeasurementId ? <GoogleAnalytics measurementId={gaMeasurementId} /> : null}
+        {gaMeasurementId ? (
+          <Suspense fallback={null}>
+            <GoogleAnalytics measurementId={gaMeasurementId} />
+          </Suspense>
+        ) : null}
         <Header />
-        <main>{children}</main>
+        <ErrorBoundary>
+          <main id="main-content">{children}</main>
+        </ErrorBoundary>
         <Footer />
       </body>
     </html>

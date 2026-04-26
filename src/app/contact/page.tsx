@@ -76,6 +76,7 @@ export default function ContactPage() {
     typeProjet: '',
     budget: '',
     message: '',
+    website: '', // honeypot
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -240,7 +241,7 @@ export default function ContactPage() {
                                 value={formData.telephone}
                                 onChange={handleChange}
                                 placeholder="06 12 34 56 78"
-                                className="form-input pl-10"
+                                className="form-input !pl-10"
                               />
                             </div>
                           </div>
@@ -256,7 +257,7 @@ export default function ContactPage() {
                                 value={formData.entreprise}
                                 onChange={handleChange}
                                 placeholder="Nom de votre société"
-                                className="form-input pl-10"
+                                className="form-input !pl-10"
                               />
                             </div>
                           </div>
@@ -269,7 +270,7 @@ export default function ContactPage() {
                               name="typeProjet"
                               value={formData.typeProjet}
                               onChange={handleChange}
-                              className={`form-input appearance-none pr-10 ${errors.typeProjet ? 'border-red-500/50' : ''}`}
+                              className={`form-input appearance-none !pr-10 ${errors.typeProjet ? 'border-red-500/50' : ''}`}
                             >
                               <option value="" disabled>
                                 Sélectionnez un type de projet
@@ -294,7 +295,7 @@ export default function ContactPage() {
                               name="budget"
                               value={formData.budget}
                               onChange={handleChange}
-                              className="form-input appearance-none pr-10"
+                              className="form-input appearance-none !pr-10"
                             >
                               <option value="">Sélectionnez une fourchette</option>
                               {budgets.map((budget) => (
@@ -319,6 +320,18 @@ export default function ContactPage() {
                           />
                           {errors.message ? <p className="text-red-400 text-xs mt-1">{errors.message}</p> : null}
                         </div>
+
+                        {/* Honeypot — hidden from users, visible to bots */}
+                        <input
+                          type="text"
+                          name="website"
+                          value={formData.website}
+                          onChange={handleChange}
+                          tabIndex={-1}
+                          autoComplete="off"
+                          aria-hidden="true"
+                          className="absolute opacity-0 pointer-events-none h-0 w-0 overflow-hidden"
+                        />
 
                         <div>
                           <HCaptcha

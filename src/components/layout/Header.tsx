@@ -31,6 +31,14 @@ export default function Header() {
     return () => { document.body.style.overflow = '' }
   }, [isMobileMenuOpen])
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isMobileMenuOpen) closeMenu()
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [isMobileMenuOpen])
+
   const closeMenu = () => setIsMobileMenuOpen(false)
 
   return (

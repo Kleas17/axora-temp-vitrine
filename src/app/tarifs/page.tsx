@@ -1,11 +1,11 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Check, X, ChevronDown, ArrowRight, Zap, Star } from 'lucide-react'
-import { AnimatedSection, AnimatedItem } from '@/components/ui/AnimatedSection'
+import { ChevronDown, ArrowRight, Zap } from 'lucide-react'
+import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import Link from 'next/link'
-import { customScopes, pricingFaqs, pricingTiers } from '@/data/pricing'
+import { budgetPrinciples, customScopes, pricingFaqs } from '@/data/pricing'
 
 export default function TarifsPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -29,6 +29,7 @@ export default function TarifsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
+      {/* Hero */}
       <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="absolute inset-0 mesh-gradient pointer-events-none" />
         <div className="absolute inset-0 dot-grid opacity-20 pointer-events-none" />
@@ -41,119 +42,83 @@ export default function TarifsPage() {
             className="max-w-3xl mx-auto"
           >
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-axora-accent/10 border border-axora-accent/20 text-axora-accent text-xs font-medium mb-6">
-              Tarifs transparents
+              Tout sur devis
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Des tarifs <span className="gradient-text">clairs</span>, sans mise en scene inutile
+              Votre budget, <span className="gradient-text">notre point de départ</span>
             </h1>
             <p className="text-slate-400 text-lg leading-relaxed">
-              Des bases tarifaires pour les projets les plus frequents, et un cadrage sur devis pour
-              les besoins plus complexes.
+              Pas de grille tarifaire figée. Chaque projet est différent et chaque devis part d&apos;un vrai échange.
+              On construit une proposition adaptée à ce que vous pouvez investir, sans rogner sur l&apos;essentiel.
             </p>
           </motion.div>
         </div>
       </section>
 
+      {/* Budget principles */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <AnimatedSection stagger className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingTiers.map((tier) => (
-              <AnimatedItem key={tier.name}>
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  transition={{ duration: 0.2 }}
-                  className={`relative flex flex-col h-full rounded-2xl ${
-                    tier.highlight
-                      ? 'bg-gradient-to-b from-[#0f1528] to-[#0f0f1a] border border-axora-blue/40 shadow-glow-blue'
-                      : 'bg-[#0f0f1a] border border-[#1a1a2e]'
-                  }`}
-                >
-                  {tier.badge && (
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                      <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold text-white bg-gradient-to-r from-axora-blue to-axora-purple shadow-lg">
-                        <Star className="w-3 h-3" fill="currentColor" />
-                        {tier.badge}
-                      </span>
-                    </div>
-                  )}
-
-                  <div className="p-8 flex flex-col h-full">
-                    <div className="mb-8">
-                      <h3 className="text-xl font-bold text-white mb-2">{tier.name}</h3>
-                      <p className="text-slate-400 text-sm leading-relaxed mb-6">{tier.description}</p>
-
-                      {tier.price ? (
-                        <div className="flex items-end gap-2">
-                          <span className="text-4xl font-black text-white">{tier.price} €</span>
-                          <span className="text-slate-400 text-sm mb-1">HT</span>
-                        </div>
-                      ) : (
-                        <div className="text-3xl font-black gradient-text">Sur devis</div>
-                      )}
-                    </div>
-
-                    <ul className="space-y-3 mb-8 flex-1">
-                      {tier.features.map((feature) => (
-                        <li key={feature.text} className="flex items-center gap-3">
-                          {feature.included ? (
-                            <Check className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                          ) : (
-                            <X className="w-4 h-4 text-slate-600 flex-shrink-0" />
-                          )}
-                          <span className={`text-sm ${feature.included ? 'text-slate-300' : 'text-slate-600'}`}>
-                            {feature.text}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <Link
-                      href="/contact"
-                      className={`w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r ${tier.color} transition-all duration-200 hover:opacity-90`}
-                    >
-                      {tier.cta}
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-                </motion.div>
-              </AnimatedItem>
-            ))}
-          </AnimatedSection>
-        </div>
-      </section>
-
-      <section id="saas" className="py-16">
         <div className="max-w-5xl mx-auto px-6">
-          <AnimatedSection className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-axora-purple/10 border border-axora-purple/20 text-axora-purple text-xs font-medium mb-4">
-              <Zap className="w-3 h-3" />
-              Projets sur-mesure
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Refontes, logiciels métier et <span className="gradient-text">MVP SaaS</span>
-            </h2>
-            <p className="text-slate-400">
-              Ces projets demandent un cadrage plus fin. Le prix dépend du périmètre, des intégrations et du niveau de personnalisation.
-            </p>
-          </AnimatedSection>
-
           <AnimatedSection className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {customScopes.map((scope) => (
-              <div key={scope.name} className="bg-[#0f0f1a] border border-[#1a1a2e] rounded-2xl p-6">
-                <div className="text-white font-semibold mb-2">{scope.name}</div>
-                <div className="text-axora-accent text-sm font-medium mb-3">{scope.note}</div>
-                <p className="text-slate-400 text-sm leading-relaxed">{scope.details}</p>
+            {budgetPrinciples.map((principle) => (
+              <div
+                key={principle.title}
+                className="bg-[#0f0f1a] border border-[#1a1a2e] rounded-2xl p-8"
+              >
+                <div className="text-3xl mb-4">{principle.icon}</div>
+                <h3 className="text-white font-semibold mb-3">{principle.title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{principle.description}</p>
               </div>
             ))}
           </AnimatedSection>
         </div>
       </section>
 
+      {/* Project types */}
+      <section id="projets" className="py-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <AnimatedSection className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-axora-purple/10 border border-axora-purple/20 text-axora-purple text-xs font-medium mb-4">
+              <Zap className="w-3 h-3" />
+              Nos projets
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Quel que soit votre projet, <span className="gradient-text">on s&apos;adapte</span>
+            </h2>
+            <p className="text-slate-400">
+              Tous nos projets sont sur devis. Le périmètre, les délais et le budget se définissent ensemble.
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {customScopes.map((scope) => (
+              <div key={scope.name} className="bg-[#0f0f1a] border border-[#1a1a2e] rounded-2xl p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-white font-semibold">{scope.name}</div>
+                  <div className="text-axora-accent text-sm font-medium">{scope.note}</div>
+                </div>
+                <p className="text-slate-400 text-sm leading-relaxed">{scope.details}</p>
+              </div>
+            ))}
+          </AnimatedSection>
+
+          <AnimatedSection className="mt-10 text-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-axora-blue to-axora-purple transition-all duration-200 hover:opacity-90"
+            >
+              Discuter de votre projet
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* FAQ */}
       <section id="faq" className="py-16 pb-24">
         <div className="max-w-3xl mx-auto px-6">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Questions <span className="gradient-text">frequentes</span>
+              Questions <span className="gradient-text">fréquentes</span>
             </h2>
           </AnimatedSection>
           <AnimatedSection className="space-y-3">

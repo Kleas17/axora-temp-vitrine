@@ -293,7 +293,7 @@ export const localLandings: LocalLanding[] = [
       {
         question: "Combien coûte la création d'un site web à Poitiers ?",
         answer:
-          "Le tarif dépend du périmètre : un site vitrine professionnel démarre à partir de 990 € HT. Consultez notre page tarifs pour les fourchettes détaillées ou contactez-nous pour un devis.",
+          "Tout est sur devis, adapté à votre budget et à votre périmètre. On part de ce que vous pouvez investir pour construire une proposition cohérente. Contactez-nous pour en parler.",
       },
     ],
   },

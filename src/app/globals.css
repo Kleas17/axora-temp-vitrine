@@ -269,6 +269,13 @@ body {
   transition: max-height 0.3s ease;
 }
 
+/* Focus visible — keyboard navigation */
+:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.8);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* Input styles */
 .form-input {
   background: #0f0f1a;

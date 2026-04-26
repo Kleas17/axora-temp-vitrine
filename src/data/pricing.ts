@@ -1,91 +1,43 @@
-export type PricingTier = {
-  name: string
-  price: string | null
+export type BudgetPrinciple = {
+  icon: string
+  title: string
   description: string
-  highlight: boolean
-  badge: string | null
-  features: Array<{
-    text: string
-    included: boolean
-  }>
-  cta: string
-  color: string
 }
 
-export const pricingTiers: PricingTier[] = [
+export const budgetPrinciples: BudgetPrinciple[] = [
   {
-    name: 'Starter',
-    price: '990',
-    description: 'Pour une présence web claire et professionnelle avec un cadre simple.',
-    highlight: false,
-    badge: null,
-    features: [
-      { text: "Site vitrine jusqu'à 5 pages", included: true },
-      { text: 'Design sur-mesure responsive', included: true },
-      { text: 'Optimisation SEO de base', included: true },
-      { text: 'Formulaire de contact', included: true },
-      { text: 'Mesure simple des conversions', included: true },
-      { text: 'Mise en ligne et accompagnement', included: true },
-      { text: 'Blog intégré', included: false },
-      { text: 'Espace privé / back-office avancé', included: false },
-      { text: 'Intégrations sur-mesure', included: false },
-      { text: 'Support prioritaire', included: false },
-    ],
-    cta: 'Commencer avec Starter',
-    color: 'from-slate-600 to-slate-700',
+    icon: '🎯',
+    title: 'Cadrage précis avant tout',
+    description:
+      'On ne chiffre pas à l\'aveugle. Chaque devis part d\'un vrai échange sur votre besoin, votre contexte et vos priorités.',
   },
   {
-    name: 'Pro',
-    price: '2490',
-    description: 'Pour les entreprises qui veulent un site plus complet, plus travaillé et plus évolutif.',
-    highlight: true,
-    badge: 'Le plus choisi',
-    features: [
-      { text: "Site complet jusqu'à 15 pages", included: true },
-      { text: 'Design premium sur-mesure', included: true },
-      { text: 'SEO avancé sur les pages clés', included: true },
-      { text: 'Blog facile à gérer', included: true },
-      { text: 'Formulaires avancés et parcours plus travaillés', included: true },
-      { text: 'Intégrations utiles selon le besoin', included: true },
-      { text: 'Base plus évolutive', included: true },
-      { text: '3 mois de maintenance inclus', included: true },
-      { text: 'Support prioritaire', included: false },
-      { text: 'Développement applicatif complexe', included: false },
-    ],
-    cta: 'Choisir Pro',
-    color: 'from-axora-blue to-axora-purple',
+    icon: '💬',
+    title: 'Votre budget, notre point de départ',
+    description:
+      'Dites-nous ce que vous pouvez investir. On construit une proposition adaptée à votre enveloppe, sans rogner sur la qualité de ce qui compte.',
   },
   {
-    name: 'Sur-mesure',
-    price: null,
-    description: 'Pour les refontes exigeantes, applications web, logiciels métier et projets SaaS.',
-    highlight: false,
-    badge: null,
-    features: [
-      { text: 'Périmètre défini ensemble', included: true },
-      { text: 'Solution sur-mesure', included: true },
-      { text: 'Cadrage et priorisation', included: true },
-      { text: 'Développement applicatif ou SaaS', included: true },
-      { text: 'Intégrations selon votre contexte', included: true },
-      { text: 'Base évolutive', included: true },
-      { text: 'Contrôle qualité renforcé', included: true },
-      { text: 'Formation ou passation', included: true },
-      { text: 'Support dédié selon le projet', included: true },
-      { text: 'Accompagnement post-lancement', included: true },
-    ],
-    cta: 'Demander un devis',
-    color: 'from-emerald-600 to-teal-600',
+    icon: '📐',
+    title: 'Périmètre ajusté, pas qualité dégradée',
+    description:
+      'Si le budget est serré, on priorise ce qui a le plus d\'impact plutôt que de tout faire à moitié. Mieux vaut moins mais bien fait.',
   },
 ]
 
 export const customScopes = [
+  {
+    name: 'Création de site web',
+    note: 'Sur devis',
+    details: 'Structure, design sur-mesure, SEO et mise en ligne selon vos objectifs et votre contexte.',
+  },
   {
     name: 'Refonte de site web',
     note: 'Sur devis',
     details: 'Audit, priorisation, reprise de structure, design et mise en ligne selon la complexité.',
   },
   {
-    name: 'Logiciel métier interne',
+    name: 'Logiciel métier',
     note: 'Sur devis',
     details: 'Périmètre cadré selon les usages, les intégrations utiles et le niveau de personnalisation attendu.',
   },

@@ -1,26 +1,26 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, Check } from 'lucide-react'
-import { pricingFaqs, pricingTiers } from '@/data/pricing'
+import { ArrowRight } from 'lucide-react'
+import { budgetPrinciples, pricingFaqs } from '@/data/pricing'
 import { absoluteUrl } from '@/lib/seo'
 
 export const metadata: Metadata = {
-  title: 'Tarif création site web et prix site web sur mesure',
+  title: 'Tarif création site web sur mesure — Axora Studio',
   description:
-    "Consultez les tarifs de création de site web Axora Studio : offre Starter dès 990 € HT, Pro dès 2 490 € HT et accompagnement sur-mesure sur devis.",
+    "Axora Studio crée des sites web sur mesure, entièrement adaptés à votre budget. Pas de grille figée : on part de votre enveloppe pour construire une proposition cohérente.",
   alternates: {
     canonical: '/tarifs-creation-site-web',
   },
   openGraph: {
-    title: 'Tarif création site web et prix site web sur mesure',
+    title: 'Tarif création site web sur mesure — Axora Studio',
     description:
-      "Repères de prix pour un site web sur mesure : Starter, Pro et accompagnement sur devis selon l'ambition du projet.",
+      "Tout sur devis, adapté à votre budget. On part de ce que vous pouvez investir pour construire la bonne proposition.",
     url: absoluteUrl('/tarifs-creation-site-web'),
   },
   twitter: {
-    title: 'Tarif création site web et prix site web sur mesure',
+    title: 'Tarif création site web sur mesure — Axora Studio',
     description:
-      "Repères de prix pour un site web sur mesure : Starter, Pro et accompagnement sur devis selon l'ambition du projet.",
+      "Tout sur devis, adapté à votre budget. On part de ce que vous pouvez investir pour construire la bonne proposition.",
   },
 }
 
@@ -71,122 +71,96 @@ export default function TarifsCreationSiteWebPage() {
       />
 
       <div className="max-w-6xl mx-auto px-6">
+        {/* Hero */}
         <section className="bg-[#0f0f1a] border border-[#1a1a2e] rounded-3xl p-8 md:p-10 mb-8">
           <span className="inline-flex px-3 py-1 rounded-full bg-axora-accent/10 border border-axora-accent/20 text-axora-accent text-xs font-medium mb-5">
-            Page budget
+            Tout sur devis
           </span>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-5 max-w-4xl">
-            Tarif création site web : des repères clairs pour cadrer votre budget
+            Tarif création site web : votre budget, notre point de départ
           </h1>
           <p className="text-slate-300 text-lg leading-relaxed max-w-3xl">
-            Si vous cherchez un prix réaliste pour un site web sur mesure, le bon point de départ n&apos;est pas
-            une moyenne vague mais un périmètre lisible. Voici les trois cadres les plus fréquents chez Axora Studio.
+            Pas de grille tarifaire figée. Le coût d&apos;un site web sur mesure dépend de votre périmètre,
+            de vos objectifs et de ce que vous pouvez investir. On part de votre enveloppe pour construire
+            une proposition cohérente — sans rogner sur ce qui compte vraiment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white rounded-xl btn-gradient"
             >
-              Demander un devis
+              Parler de votre budget
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/tarifs"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white rounded-xl border border-[#1a1a2e] hover:border-axora-accent/40 transition-all"
             >
-              Voir la page tarifs complète
+              Voir notre approche tarifaire
             </Link>
           </div>
         </section>
 
-        <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-          {pricingTiers.map((tier) => (
-            <article
-              key={tier.name}
-              className={`rounded-3xl p-8 ${
-                tier.highlight
-                  ? 'bg-gradient-to-b from-[#0f1528] to-[#0f0f1a] border border-axora-blue/40 shadow-glow-blue'
-                  : 'bg-[#0f0f1a] border border-[#1a1a2e]'
-              }`}
+        {/* Budget principles */}
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {budgetPrinciples.map((principle) => (
+            <div
+              key={principle.title}
+              className="bg-[#0f0f1a] border border-[#1a1a2e] rounded-2xl p-8"
             >
-              <div className="mb-6">
-                <div className="flex items-center justify-between gap-4 mb-3">
-                  <h2 className="text-2xl font-bold text-white">{tier.name}</h2>
-                  {tier.badge ? (
-                    <span className="inline-flex px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-axora-blue to-axora-purple">
-                      {tier.badge}
-                    </span>
-                  ) : null}
-                </div>
-                <p className="text-slate-400 text-sm leading-relaxed mb-5">{tier.description}</p>
-                {tier.price ? (
-                  <div className="flex items-end gap-2">
-                    <span className="text-4xl font-black text-white">{tier.price} €</span>
-                    <span className="text-slate-400 text-sm mb-1">HT</span>
-                  </div>
-                ) : (
-                  <div className="text-3xl font-black gradient-text">Sur devis</div>
-                )}
-              </div>
-
-              <ul className="space-y-3">
-                {tier.features.filter((feature) => feature.included).map((feature) => (
-                  <li key={feature.text} className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-slate-300 text-sm">{feature.text}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
+              <div className="text-3xl mb-4">{principle.icon}</div>
+              <h3 className="text-white font-semibold mb-3">{principle.title}</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">{principle.description}</p>
+            </div>
           ))}
         </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-8 mb-8">
           <section className="bg-[#0f0f1a] border border-[#1a1a2e] rounded-3xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Comment lire ces prix</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Ce qui influe sur le prix d&apos;un site web</h2>
             <div className="space-y-4 text-slate-300 leading-relaxed">
               <p>
-                Un tarif de création de site web n&apos;a de valeur que si le périmètre est clair. Deux devis peuvent
-                afficher un prix proche tout en couvrir des niveaux très différents de cadrage, de design, de SEO ou
-                d&apos;accompagnement.
+                Un tarif de création de site web dépend avant tout du périmètre. La structure, le nombre de pages,
+                la complexité du design, le travail SEO et l&apos;accompagnement au lancement sont autant de leviers
+                qui font varier l&apos;investissement.
               </p>
               <p>
-                L&apos;offre Starter convient à un site vitrine simple avec un objectif net. L&apos;offre Pro devient
-                pertinente quand le contenu, le SEO et les parcours ont plus de poids. Le sur-mesure sert les refontes
-                plus sensibles, les besoins métier et les projets applicatifs.
+                Ce qu&apos;on ne fait pas : gonfler un devis parce que le budget le permet. On construit une
+                proposition adaptée à ce que vous pouvez mettre, en priorisant ce qui a le plus d&apos;impact pour votre activité.
               </p>
               <p>
-                Si vous comparez plusieurs devis, regardez surtout ce qui est inclus dans la structure, la production
-                des contenus, l&apos;optimisation SEO et la phase de mise en ligne.
+                Si votre enveloppe est contrainte, on ajuste le périmètre plutôt que de tout faire à moitié.
+                Mieux vaut un site bien fait et ciblé qu&apos;un site trop large et mal exécuté.
               </p>
             </div>
           </section>
 
           <aside className="bg-gradient-to-br from-axora-blue/10 to-axora-purple/10 border border-axora-accent/20 rounded-3xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Besoin d&apos;un chiffrage propre</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Obtenez un devis adapté</h2>
             <p className="text-slate-300 leading-relaxed mb-6">
-              Si votre besoin hésite entre vitrine, refonte et projet plus sur mesure, un échange rapide permet souvent
-              de fixer la bonne fourchette budgétaire sans surdimensionner le projet.
+              Dites-nous votre budget et vos objectifs. On vous revient rapidement avec une proposition
+              concrète, sans engagement.
             </p>
             <div className="space-y-3">
               <Link
                 href="/contact"
                 className="inline-flex w-full items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white rounded-xl btn-gradient"
               >
-                Parler de votre budget
+                Demander un devis
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/tarifs"
                 className="inline-flex w-full items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white rounded-xl border border-[#1a1a2e] hover:border-axora-accent/40 transition-all"
               >
-                Voir tous les repères tarifaires
+                Notre approche tarifaire
               </Link>
             </div>
           </aside>
         </div>
 
-        <section className="bg-[#0f0f1a] border border-[#1a1a2e] rounded-3xl p-8 mt-8">
+        {/* FAQ */}
+        <section className="bg-[#0f0f1a] border border-[#1a1a2e] rounded-3xl p-8">
           <h2 className="text-2xl font-bold text-white mb-6">Questions fréquentes sur le budget d&apos;un site web</h2>
           <div className="space-y-5">
             {faqItems.map((item) => (

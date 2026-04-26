@@ -23,7 +23,7 @@ export const serviceEnrichment: Record<string, ServiceEnrichment> = {
     timelineLabel:
       'Souvent 3 à 6 semaines selon le volume de contenu et le niveau de personnalisation.',
     budgetLabel:
-      'Point de repère : de la base Starter au niveau Pro selon la structure, le design et le contenu à produire.',
+      'Tout sur devis, adapté à votre budget. On définit ensemble le périmètre selon ce que vous pouvez investir.',
     relatedArticleSlugs: [
       'site-sur-mesure-ou-template',
       'choisir-agence-web-paris',
