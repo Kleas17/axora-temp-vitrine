@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Zap, Mail, ArrowRight, Phone } from 'lucide-react'
+import { Mail, ArrowRight, Phone } from 'lucide-react'
 import { siteConfig } from '@/lib/seo'
 
 const footerLinks = {
@@ -47,7 +47,7 @@ export default function Footer() {
           <div className="md:col-span-2 xl:col-span-2">
             <Link href="/" className="flex items-center gap-2 group mb-4">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-axora-blue to-axora-purple flex items-center justify-center shadow-glow-blue">
-                <Zap className="w-5 h-5 text-white" fill="white" />
+                <img src="/axoralogo/axoralogopng.png" alt="Axora Studio" className="w-6 h-6 object-contain" />
               </div>
               <span className="text-2xl font-bold gradient-text">AXORA</span>
             </Link>

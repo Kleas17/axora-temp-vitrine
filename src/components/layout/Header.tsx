@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, Zap } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { siteConfig } from '@/lib/seo'
 
 const navLinks = [
@@ -55,7 +55,7 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-axora-blue to-axora-purple flex items-center justify-center shadow-glow-blue group-hover:shadow-glow-purple transition-all duration-300">
-                <Zap className="w-4 h-4 text-white" fill="white" />
+                <img src="/axoralogo/axoralogopng.png" alt="Axora Studio" className="w-5 h-5 object-contain" />
               </div>
               <span className="text-xl font-bold gradient-text tracking-tight">AXORA</span>
             </Link>
