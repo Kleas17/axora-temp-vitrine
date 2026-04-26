@@ -70,9 +70,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/icon.svg',
-    shortcut: '/icon.svg',
-    apple: '/icon.svg',
+    icon: '/axoralogo/axoralogopng.png',
+    shortcut: '/axoralogo/axoralogopng.png',
+    apple: '/axoralogo/axoralogopng.png',
   },
   verification: googleSiteVerification
     ? {
@@ -93,7 +93,7 @@ export default function RootLayout({
     name: siteConfig.name,
     url: siteConfig.url,
     email: siteConfig.contactEmail,
-    logo: absoluteUrl('/icon.svg'),
+    logo: absoluteUrl('/axoralogo/axoralogopng.png'),
     sameAs,
   }
 
