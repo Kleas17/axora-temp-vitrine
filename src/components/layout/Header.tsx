@@ -109,7 +109,7 @@ export default function Header() {
         <div className="flex items-center justify-between p-6 border-b border-[#1a1a2e]">
           <Link href="/" className="flex items-center gap-2" onClick={closeMenu}>
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-axora-blue to-axora-purple flex items-center justify-center">
-              <Zap className="w-4 h-4 text-white" fill="white" />
+              <img src="/axoralogo/axoralogopng.png" alt="Axora Studio" className="w-5 h-5 object-contain" />
             </div>
             <span className="text-xl font-bold gradient-text">AXORA</span>
           </Link>
