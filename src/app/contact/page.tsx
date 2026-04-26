@@ -144,7 +144,8 @@ export default function ContactPage() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
+    const sanitized = name === 'telephone' ? value.replace(/\D/g, '').slice(0, 10) : name === 'message' ? value.slice(0, 300) : value
+    setFormData((prev) => ({ ...prev, [name]: sanitized }))
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: '' }))
   }
 
@@ -329,9 +330,15 @@ export default function ContactPage() {
                             onChange={handleChange}
                             rows={5}
                             placeholder="Parlez-nous de votre projet, de vos objectifs, de votre délai et du résultat attendu."
+                            maxLength={300}
                             className={`form-input resize-none ${errors.message ? 'border-red-500/50' : ''}`}
                           />
-                          {errors.message ? <p className="text-red-400 text-xs mt-1">{errors.message}</p> : null}
+                          <div className="flex justify-between items-center mt-1">
+                            {errors.message ? <p className="text-red-400 text-xs">{errors.message}</p> : <span />}
+                            <p className={`text-xs ml-auto ${formData.message.length >= 280 ? 'text-amber-400' : 'text-slate-500'}`}>
+                              {formData.message.length}/300
+                            </p>
+                          </div>
                         </div>
 
                         {/* Honeypot — hidden from users, visible to bots */}
