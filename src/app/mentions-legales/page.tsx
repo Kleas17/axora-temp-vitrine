@@ -15,11 +15,11 @@ export default function MentionsLegalesPage() {
               </h2>
               <div className="space-y-1.5">
                 <p><span className="text-slate-400">Dénomination sociale :</span> Axora Studio</p>
-                <p><span className="text-slate-400">Forme juridique :</span> <span className="text-amber-400 font-medium">Auto-entrepreneur</span></p>
-                <p><span className="text-slate-400">Siège social :</span> <span className="text-amber-400 font-medium">4 ALL DE LA CHENEVIERE
-86000 POITIERS</span> — Poitiers, 86000, France</p>
-                <p><span className="text-slate-400">SIRET :</span> <span className="text-amber-400 font-medium">94879325200024</span></p>
-                <p><span className="text-slate-400">Directeur de la publication :</span> <span className="text-amber-400 font-medium">DA MOTA Marc-Antoine</span> (Prénom Nom)</p>
+                <p><span className="text-slate-400">Forme juridique :</span> Auto-entrepreneur</p>
+                <p><span className="text-slate-400">Siège social :</span> 4 ALL DE LA CHENEVIERE
+86000 POITIERS — Poitiers, 86000, France</p>
+                <p><span className="text-slate-400">SIRET :</span> 94879325200024</p>
+                <p><span className="text-slate-400">Directeur de la publication :</span> DA MOTA Marc-Antoine</p>
                 <p><span className="text-slate-400">Email :</span> marcantoine.damota@axora-studio.fr</p>
                 <p><span className="text-slate-400">Site web :</span> https://axora-studio.fr</p>
               </div>
