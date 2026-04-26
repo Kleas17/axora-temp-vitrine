@@ -58,6 +58,21 @@ body {
   background-clip: text;
 }
 
+@keyframes text-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+}
+
+.gradient-text-hero {
+  background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  font-size: 1.1em;
+  animation: text-breathe 3s ease-in-out infinite;
+}
+
 .gradient-text-warm {
   background: linear-gradient(135deg, #60a5fa, #c084fc);
   -webkit-background-clip: text;

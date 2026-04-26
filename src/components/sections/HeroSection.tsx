@@ -59,10 +59,9 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20">
         <div className="text-center max-w-5xl mx-auto">
           <div className="hero-item flex justify-center mb-8" style={{ '--delay': '0ms' } as React.CSSProperties}>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-axora-accent/10 border border-axora-accent/20 text-axora-accent text-sm font-medium">
-              <Zap className="w-3.5 h-3.5" fill="currentColor" />
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-axora-accent/10 border border-axora-accent/20 text-axora-accent text-xs font-medium whitespace-nowrap">
+              <Zap className="w-3 h-3 shrink-0" fill="currentColor" />
               Sites web, refontes et logiciels sur-mesure
-              <span className="w-1.5 h-1.5 rounded-full bg-axora-accent animate-pulse" />
             </span>
           </div>
 
@@ -72,9 +71,9 @@ export default function HeroSection() {
           >
             Des projets digitaux sur-mesure
             <br className="hidden lg:block" />
-            {' '}pour <span className="gradient-text">clarifier</span> votre offre
+            {' '}pour <span className="gradient-text-hero">clarifier</span> votre offre
             <br />
-            et soutenir votre <span className="gradient-text">croissance</span>
+            et soutenir votre <span className="gradient-text-hero">croissance</span>
           </h1>
 
           <p
